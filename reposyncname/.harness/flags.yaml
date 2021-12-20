@@ -1,0 +1,1337 @@
+featureFlags:
+  flags:
+  - flag:
+      name: DiscoverTest
+      identifier: DiscoverTest
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Enable ZAP logger
+      identifier: Enable_ZAP_logger
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "on"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: "true"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - Prerelease
+        targetRules:
+        - targets:
+          - identifier: davej
+          variation: "true"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: CE Trial Limit
+      identifier: harnessappdemocetriallimit
+      description: Trial limit for CE module
+      permanent: false
+      spec:
+        type: int
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        variations:
+        - identifier: "7"
+          value: "7"
+        - identifier: "15"
+          value: "15"
+        - identifier: "20"
+          value: "20"
+        - identifier: "30"
+          value: "30"
+        - identifier: "90"
+          value: "90"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+        targetRules:
+        - targets:
+          - identifier: bootcamp
+          variation: "15"
+        - targets:
+          - identifier: harness
+          variation: "90"
+        - targets:
+          - identifier: Blackrock
+          variation: "7"
+      - identifier: Prod
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+        targetRules:
+        - targetGroups:
+          - identifier: betasegment
+          variation: "20"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
+        targetRules:
+        - targetGroups:
+          - identifier: davegroup
+          variation: "7"
+  - flag:
+      name: CF Ribbon
+      identifier: harnessappdemocfribbon
+      description: Flag to toggle CF ribbon
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        targetRules:
+        - targets:
+          - identifier: bootcamp
+          variation: "true"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        targetRules:
+        - targetGroups:
+          - identifier: betasegment
+          variation: "false"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: CF Trial Limit
+      identifier: harnessappdemocftriallimit
+      description: Trial limit for CF module
+      permanent: false
+      spec:
+        type: int
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        variations:
+        - identifier: "10"
+          value: "10"
+        - identifier: "20"
+          value: "20"
+        - identifier: "30"
+          value: "30"
+        - identifier: "60"
+          value: "60"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+        targetRules:
+        - targets:
+          - identifier: Aptiv
+          variation: "60"
+      - identifier: Prod
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "10"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "10"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "10"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "on"
+      - identifier: sfdsd
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+  - flag:
+      name: CI Trial Limit
+      identifier: harnessappdemocitriallimit
+      description: Trial limit for CI module
+      permanent: false
+      spec:
+        type: string
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        variations:
+        - identifier: "7"
+          value: "7"
+        - identifier: "14"
+          value: "14"
+        - identifier: "21"
+          value: "21"
+        - identifier: "30"
+          value: "30"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "on"
+        targetRules:
+        - targetGroups:
+          - identifier: VIPs_in_USA
+          variation: "21"
+      - identifier: Prod
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "on"
+      - identifier: sfdsd
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
+  - flag:
+      name: CV Trial Limit
+      identifier: harnessappdemocvtriallimit
+      description: ""
+      permanent: false
+      spec:
+        type: int
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        variations:
+        - identifier: "7"
+          value: "7"
+        - identifier: "20"
+          value: "20"
+        - identifier: "30"
+          value: "30"
+        - identifier: "60"
+          value: "60"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "on"
+        targetRules:
+        - targets:
+          - identifier: Blackrock
+          variation: "20"
+      - identifier: Prod
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "7"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "on"
+      - identifier: sfdsd
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+  - flag:
+      name: Enable Dark Mode
+      identifier: harnessappdemodarkmode
+      description: "demo target page here: \nharness-uat.surge.sh/\n"
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: "true"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - BETABlackrock
+        targetRules:
+        - targets:
+          - identifier: norm
+          - identifier: Fiserv
+          - identifier: __global__cf_target
+          variation: "false"
+        - targetGroups:
+          - identifier: bootcamp
+          targets:
+          - identifier: Harness
+          - identifier: Experian
+          variation: "true"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        targetRules:
+        - targets:
+          - identifier: user1@example.com
+          variation: "false"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: "true"
+          clauses:
+          - attribute: identifier
+            op: equal
+            values:
+            - testaccountid
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "off"
+        targetRules:
+        - targetGroups:
+          - identifier: Group1
+          variation: "true"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: "false"
+          clauses:
+          - attribute: identifier
+            op: starts_with
+            values:
+            - foo
+        targetRules:
+        - targets:
+          - identifier: dave
+          variation: "true"
+  - flag:
+      name: Enable CE Module
+      identifier: harnessappdemoenablecemodule
+      description: Flag to toggle Cloud Cost
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Enable CF Module
+      identifier: harnessappdemoenablecfmodule
+      description: Flag to toggle Continuous Features
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Enable CI Module
+      identifier: harnessappdemoenablecimodule
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Enable CV Module
+      identifier: harnessappdemoenablecvmodule
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Enable Global Help
+      identifier: harnessappdemoenableglobalhelp
+      description: Show help button
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "false"
+          offVariation: "false"
+        state: "off"
+        rules:
+        - priority: 1
+          serve:
+            serveVariation: "true"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - Beta
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "on"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: Dashboards Enabled
+      identifier: Simpletoggle
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: ""
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  projectIdentifier: FeatureFlagsDemo
+  orgIdentifier: default
