@@ -219,14 +219,14 @@ featureFlags:
         state: "off"
         targetRules:
         - targets:
+          - identifier: harness
+          variation: "90"
+        - targets:
           - identifier: Blackrock
           variation: "7"
         - targets:
           - identifier: bootcamp
           variation: "15"
-        - targets:
-          - identifier: harness
-          variation: "90"
       - identifier: Prod
         default:
           onVariation: "20"
@@ -696,7 +696,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "off"
+        state: "on"
         rules:
         - priority: 1
           serve:
