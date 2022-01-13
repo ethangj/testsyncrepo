@@ -707,17 +707,17 @@ featureFlags:
             values:
             - BETABlackrock
         targetRules:
+        - targets:
+          - identifier: norm
+          - identifier: __global__cf_target
+          - identifier: Fiserv
+          variation: "false"
         - targetGroups:
           - identifier: bootcamp
           targets:
           - identifier: Experian
           - identifier: Harness
           variation: "true"
-        - targets:
-          - identifier: norm
-          - identifier: __global__cf_target
-          - identifier: Fiserv
-          variation: "false"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -794,7 +794,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "on"
+        state: "off"
         rules:
         - priority: 1
           serve:
