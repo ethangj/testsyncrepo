@@ -218,6 +218,9 @@ featureFlags:
           offVariation: "7"
         state: "off"
         targetRules:
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "20"
         - targets:
           - identifier: harness
           variation: "90"
@@ -519,8 +522,8 @@ featureFlags:
           variation: "21"
       - identifier: Prod
         default:
-          onVariation: "14"
-          offVariation: "7"
+          onVariation: "30"
+          offVariation: "21"
         state: "off"
       - identifier: FlagDev
         default:
@@ -611,6 +614,9 @@ featureFlags:
         - targets:
           - identifier: Blackrock
           variation: "20"
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "60"
       - identifier: Prod
         default:
           onVariation: "30"
@@ -696,7 +702,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "off"
+        state: "on"
         rules:
         - priority: 1
           serve:
@@ -706,18 +712,32 @@ featureFlags:
             op: segmentMatch
             values:
             - BETABlackrock
+        - priority: 2
+          serve:
+            distribution:
+              bucketBy: identifier
+              variations:
+              - weight: 50
+                variation: "true"
+              - weight: 50
+                variation: "false"
+          clauses:
+          - attribute: ""
+            op: segmentMatch
+            values:
+            - FlagsTeam
         targetRules:
+        - targets:
+          - identifier: norm
+          - identifier: __global__cf_target
+          - identifier: Fiserv
+          variation: "false"
         - targetGroups:
           - identifier: bootcamp
           targets:
           - identifier: Experian
           - identifier: Harness
           variation: "true"
-        - targets:
-          - identifier: norm
-          - identifier: __global__cf_target
-          - identifier: Fiserv
-          variation: "false"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -1005,7 +1025,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "on"
+        state: "off"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -1270,9 +1290,9 @@ featureFlags:
         state: "off"
       - identifier: demoenv
         default:
-          onVariation: "true"
+          onVariation: "false"
           offVariation: "false"
-        state: "off"
+        state: "on"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -1326,8 +1346,8 @@ featureFlags:
       - identifier: devteam
         default:
           onVariation: "true"
-          offVariation: "false"
-        state: "off"
+          offVariation: "true"
+        state: "on"
       - identifier: flagdev2
         default:
           onVariation: "true"
