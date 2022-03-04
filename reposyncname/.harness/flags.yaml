@@ -218,6 +218,9 @@ featureFlags:
           offVariation: "7"
         state: "off"
         targetRules:
+        - targets:
+          - identifier: harness
+          variation: "90"
         - targetGroups:
           - identifier: FlagsTeam
           variation: "20"
@@ -227,9 +230,6 @@ featureFlags:
         - targets:
           - identifier: Blackrock
           variation: "7"
-        - targets:
-          - identifier: harness
-          variation: "90"
       - identifier: Prod
         default:
           onVariation: "20"
