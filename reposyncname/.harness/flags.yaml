@@ -234,12 +234,12 @@ featureFlags:
         - targets:
           - identifier: Blackrock
           variation: "7"
-        - targets:
-          - identifier: harness
-          variation: "90"
         - targetGroups:
           - identifier: FlagsTeam
           variation: "20"
+        - targets:
+          - identifier: harness
+          variation: "90"
       - identifier: Prod
         default:
           onVariation: "20"
@@ -762,17 +762,17 @@ featureFlags:
             values:
             - FlagsTeam
         targetRules:
+        - targets:
+          - identifier: norm
+          - identifier: __global__cf_target
+          - identifier: Fiserv
+          variation: "false"
         - targetGroups:
           - identifier: bootcamp
           targets:
           - identifier: Experian
           - identifier: Harness
           variation: "true"
-        - targets:
-          - identifier: norm
-          - identifier: __global__cf_target
-          - identifier: Fiserv
-          variation: "false"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -1426,7 +1426,7 @@ featureFlags:
         targetRules:
         - targets:
           - identifier: normstarget
-          variation: "false"
+          variation: "true"
   - flag:
       name: NormFF
       identifier: normff
