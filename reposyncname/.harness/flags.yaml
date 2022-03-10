@@ -641,12 +641,12 @@ featureFlags:
           offVariation: "7"
         state: "on"
         targetRules:
-        - targets:
-          - identifier: Blackrock
-          variation: "20"
         - targetGroups:
           - identifier: FlagsTeam
           variation: "60"
+        - targets:
+          - identifier: Blackrock
+          variation: "20"
       - identifier: Prod
         default:
           onVariation: "30"
@@ -1426,7 +1426,7 @@ featureFlags:
         targetRules:
         - targets:
           - identifier: normstarget
-          variation: "true"
+          variation: "false"
   - flag:
       name: NormFF
       identifier: normff
