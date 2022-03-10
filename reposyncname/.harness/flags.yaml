@@ -228,18 +228,18 @@ featureFlags:
           offVariation: "7"
         state: "off"
         targetRules:
-        - targetGroups:
-          - identifier: FlagsTeam
-          variation: "20"
+        - targets:
+          - identifier: harness
+          variation: "90"
         - targets:
           - identifier: bootcamp
           variation: "15"
         - targets:
           - identifier: Blackrock
           variation: "7"
-        - targets:
-          - identifier: harness
-          variation: "90"
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "20"
       - identifier: Prod
         default:
           onVariation: "20"
@@ -641,12 +641,12 @@ featureFlags:
           offVariation: "7"
         state: "on"
         targetRules:
-        - targetGroups:
-          - identifier: FlagsTeam
-          variation: "60"
         - targets:
           - identifier: Blackrock
           variation: "20"
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "60"
       - identifier: Prod
         default:
           onVariation: "30"
@@ -1422,7 +1422,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "off"
+        state: "on"
   - flag:
       name: NormFF
       identifier: normff
