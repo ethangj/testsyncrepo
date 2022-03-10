@@ -762,17 +762,17 @@ featureFlags:
             values:
             - FlagsTeam
         targetRules:
-        - targets:
-          - identifier: norm
-          - identifier: __global__cf_target
-          - identifier: Fiserv
-          variation: "false"
         - targetGroups:
           - identifier: bootcamp
           targets:
           - identifier: Experian
           - identifier: Harness
           variation: "true"
+        - targets:
+          - identifier: norm
+          - identifier: __global__cf_target
+          - identifier: Fiserv
+          variation: "false"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -1423,6 +1423,10 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "on"
+        targetRules:
+        - targets:
+          - identifier: normstarget
+          variation: "false"
   - flag:
       name: NormFF
       identifier: normff
