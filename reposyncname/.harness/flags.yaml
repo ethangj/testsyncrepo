@@ -228,6 +228,9 @@ featureFlags:
           offVariation: "7"
         state: "off"
         targetRules:
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "20"
         - targets:
           - identifier: bootcamp
           variation: "15"
@@ -237,9 +240,6 @@ featureFlags:
         - targets:
           - identifier: harness
           variation: "90"
-        - targetGroups:
-          - identifier: FlagsTeam
-          variation: "20"
       - identifier: Prod
         default:
           onVariation: "20"
@@ -1508,6 +1508,97 @@ featureFlags:
           onVariation: "true"
           offVariation: "true"
         state: "on"
+      - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: NormEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+  - flag:
+      name: NormJavaSDKFlagTest
+      identifier: normjavasdkflagtest
+      description: ""
+      permanent: false
+      spec:
+        type: boolean
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        variations:
+        - identifier: "true"
+          value: "true"
+        - identifier: "false"
+          value: "false"
+      environments:
+      - identifier: ""
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: demoenv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Prod
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: FlagDev
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env_test_123
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: env
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: rushabhtest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: storztest
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: testdeleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: TestingNewEnv
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: Test_on_the_Fly
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: sfdsd
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: devteam
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: flagdev2
         default:
           onVariation: "true"
