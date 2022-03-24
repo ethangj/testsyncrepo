@@ -695,12 +695,12 @@ featureFlags:
             values:
             - FlagsTeam
         targetRules:
-        - targetGroups:
-          - identifier: FlagsTeam
-          variation: "60"
         - targets:
           - identifier: Blackrock
           variation: "20"
+        - targetGroups:
+          - identifier: FlagsTeam
+          variation: "60"
       - identifier: Prod
         default:
           onVariation: "30"
@@ -791,7 +791,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "on"
+        state: "off"
         rules:
         - priority: 0
           serve:
