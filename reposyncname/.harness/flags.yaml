@@ -86,6 +86,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -186,6 +191,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
@@ -335,6 +345,11 @@ featureFlags:
         - targetGroups:
           - identifier: davegroup
           variation: "7"
+      - identifier: april6deleteme
+        default:
+          onVariation: "20"
+          offVariation: "7"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "20"
@@ -443,6 +458,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -538,6 +558,11 @@ featureFlags:
           offVariation: "10"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "20"
+          offVariation: "10"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "20"
           offVariation: "10"
@@ -650,6 +675,11 @@ featureFlags:
           onVariation: "14"
           offVariation: "7"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "14"
+          offVariation: "7"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "14"
@@ -757,6 +787,11 @@ featureFlags:
           offVariation: "7"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "30"
+          offVariation: "7"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "30"
           offVariation: "7"
@@ -934,6 +969,11 @@ featureFlags:
         - targets:
           - identifier: dave
           variation: "true"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1021,6 +1061,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
@@ -1116,6 +1161,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1207,6 +1257,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1294,6 +1349,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
@@ -1398,6 +1458,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1485,6 +1550,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
@@ -1580,6 +1650,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1667,6 +1742,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
@@ -1762,6 +1842,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1853,6 +1938,11 @@ featureFlags:
           onVariation: "true"
           offVariation: "false"
         state: "off"
+      - identifier: april6deleteme
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
       - identifier: NormEnv
         default:
           onVariation: "true"
@@ -1940,6 +2030,11 @@ featureFlags:
           offVariation: "false"
         state: "off"
       - identifier: flagdev2
+        default:
+          onVariation: "true"
+          offVariation: "false"
+        state: "off"
+      - identifier: april6deleteme
         default:
           onVariation: "true"
           offVariation: "false"
