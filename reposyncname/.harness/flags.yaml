@@ -25,7 +25,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "off"
+        state: "on"
       - identifier: Prod
         default:
           onVariation: "true"
@@ -344,14 +344,14 @@ featureFlags:
             - FlagsTeam
         targetRules:
         - targets:
-          - identifier: Blackrock
-          variation: "7"
-        - targets:
           - identifier: harness
           variation: "90"
         - targets:
           - identifier: bootcamp
           variation: "15"
+        - targets:
+          - identifier: Blackrock
+          variation: "7"
         - targetGroups:
           - identifier: FlagsTeam
           variation: "20"
