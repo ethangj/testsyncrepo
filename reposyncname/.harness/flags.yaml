@@ -343,12 +343,12 @@ featureFlags:
             values:
             - FlagsTeam
         targetRules:
-        - targets:
-          - identifier: Blackrock
-          variation: "7"
         - targetGroups:
           - identifier: FlagsTeam
           variation: "20"
+        - targets:
+          - identifier: Blackrock
+          variation: "7"
         - targets:
           - identifier: harness
           variation: "90"
@@ -922,7 +922,7 @@ featureFlags:
         default:
           onVariation: "true"
           offVariation: "false"
-        state: "off"
+        state: "on"
         rules:
         - priority: 0
           serve:
